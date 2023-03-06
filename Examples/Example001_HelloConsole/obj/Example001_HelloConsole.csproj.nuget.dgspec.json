@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/temp_gb2_c_sharp_study/.devcontainer/Examples/Example001_HelloConsole/Example001_HelloConsole.csproj": {}
+    "/workspaces/temp_gb2_c_sharp_study/Examples/Example001_HelloConsole/Example001_HelloConsole.csproj": {}
   },
   "projects": {
-    "/workspaces/temp_gb2_c_sharp_study/.devcontainer/Examples/Example001_HelloConsole/Example001_HelloConsole.csproj": {
+    "/workspaces/temp_gb2_c_sharp_study/Examples/Example001_HelloConsole/Example001_HelloConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/temp_gb2_c_sharp_study/.devcontainer/Examples/Example001_HelloConsole/Example001_HelloConsole.csproj",
+        "projectUniqueName": "/workspaces/temp_gb2_c_sharp_study/Examples/Example001_HelloConsole/Example001_HelloConsole.csproj",
         "projectName": "Example001_HelloConsole",
-        "projectPath": "/workspaces/temp_gb2_c_sharp_study/.devcontainer/Examples/Example001_HelloConsole/Example001_HelloConsole.csproj",
+        "projectPath": "/workspaces/temp_gb2_c_sharp_study/Examples/Example001_HelloConsole/Example001_HelloConsole.csproj",
         "packagesPath": "/home/vscode/.nuget/packages/",
-        "outputPath": "/workspaces/temp_gb2_c_sharp_study/.devcontainer/Examples/Example001_HelloConsole/obj/",
+        "outputPath": "/workspaces/temp_gb2_c_sharp_study/Examples/Example001_HelloConsole/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/vscode/.nuget/NuGet/NuGet.Config"
