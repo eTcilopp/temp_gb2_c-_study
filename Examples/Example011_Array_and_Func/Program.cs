@@ -1,4 +1,4 @@
-﻿void FillArray(int[] collection)  // void - метод без return, который ничего не возвращаеи
+﻿void FillArray(int[] collection)  // void - метод без return, который ничего не возвращает
 {
     int length = collection.Length;
     int index = 0;
