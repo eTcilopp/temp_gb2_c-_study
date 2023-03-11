@@ -34,9 +34,9 @@ string day_num = Console.ReadLine();
 int[] weekend_days = {6, 7};
 if (weekend_days.Contains(Convert.ToInt32(day_num)))
 {
-    Console.WriteLine("Day " + day_num + "is a WeekEnd");
+    Console.WriteLine($"Day {day_num} is a WeekEnd");
 }
 else
 {
-    Console.WriteLine("Day " + day_num + " is NOT a WeekEnd");
+    Console.WriteLine($"Day {day_num} is NOT a WeekEnd");
 }
