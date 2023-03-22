@@ -74,7 +74,10 @@ Random getRandomObj(int seed)
 }
 
 
-double[] arrayOfDoubles = getArrayOfDoubles(getRandomObj(seed), 5);
+Console.Write("Problem 3. Enter array size: ");
+int array3Size = Convert.ToInt32(Console.ReadLine());
+
+double[] arrayOfDoubles = getArrayOfDoubles(getRandomObj(seed), array3Size);
 Console.Write("[{0}]", string.Join(", ", arrayOfDoubles));
 
 double getMinMaxDiff(double[] arrayOfDoubles)
@@ -90,6 +93,5 @@ double getMinMaxDiff(double[] arrayOfDoubles)
     return max - min;
 }
 
-double res = getMinMaxDiff(arrayOfDoubles);
-System.Console.WriteLine($"diff {res}");
+System.Console.WriteLine($"diff: {getMinMaxDiff(arrayOfDoubles)}");
 // System.Console.WriteLine(res[1]);
