@@ -29,6 +29,8 @@ int[] tergerArray = getRandomArray(arraySize);
 Console.Write("[{0}]", string.Join(", ", tergerArray));
 System.Console.WriteLine($"--> {countEvenNumbers(tergerArray)} even number(s).");
 
+
+
 // Задача 2: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных индексах.
 
 
