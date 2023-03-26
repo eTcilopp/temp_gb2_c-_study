@@ -10,7 +10,7 @@ int[] GetInitialDataFromUser()
         nextElement = Console.ReadLine()!;
         try
         {
-            // Array.Resize(ref resArray, resArray.Length + 1);
+            Array.Resize(ref resArray, resArray.Length + 1);
             resArray[resArray.Length - 1] = Convert.ToInt32(nextElement);
         }
         catch
@@ -33,9 +33,9 @@ int getPositiveNumbersCount(int[] arr)
 
 int[] myArr = GetInitialDataFromUser();
 
-int result = getPositiveNumbersCount(myArr);
+// int result = getPositiveNumbersCount(myArr);
 
-System.Console.WriteLine(result);
+System.Console.WriteLine($"Provided array contains {getPositiveNumbersCount(myArr)} negative numbers.");
 
 
 // Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых,
