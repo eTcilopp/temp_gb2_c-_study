@@ -33,8 +33,6 @@ int getPositiveNumbersCount(int[] arr)
 
 int[] myArr = GetInitialDataFromUser();
 
-// int result = getPositiveNumbersCount(myArr);
-
 System.Console.WriteLine($"Provided array contains {getPositiveNumbersCount(myArr)} negative numbers.");
 
 
