@@ -37,7 +37,7 @@ int[,] GetSortedArray(int[,] unsortedArray)
     return resArray;
 }
 
-void print2dArray(int[,] array)
+void Print2dArray(int[,] array)
 {
     for (int i=0; i<array.GetLength(0); i++)
     {
@@ -57,6 +57,43 @@ int[,] myArray = new int [,]
     {8, 4, 2, 4}
 };
 
-print2dArray(myArray);
+Print2dArray(myArray);
 System.Console.WriteLine();
-print2dArray(GetSortedArray(myArray));
+Print2dArray(GetSortedArray(myArray));
+
+//Задача 57: Составить частотный словарь элементов двумерного массива. 
+//Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
+
+
+
+void PrintArrayFA(int[,] array)
+{
+    Dictionary<int, int> dict = new Dictionary<int, int>();
+    foreach(int el in array)
+    {
+        try
+        {
+            dict.Add(el, 1);
+        }
+        catch
+        {
+            dict[el]++; 
+        }
+    }
+
+    foreach (KeyValuePair<int, int> kvp in dict)
+    {
+        Console.WriteLine($"{kvp.Key}: found {kvp.Value} time(s);");
+    }
+}
+
+
+int[,] myArray2 = new int [,]
+{
+    {1, 2, 3},
+    {4, 6, 1},
+    {2, 1, 6}
+};
+
+Print2dArray(myArray2);
+PrintArrayFA(myArray2);
