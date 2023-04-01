@@ -98,32 +98,78 @@ int[,] myArray2 = new int [,]
 Print2dArray(myArray2);
 PrintArrayFA(myArray2);
 
-// Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
 
-int[,] matrix1 = new int [,]
+// Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4. 
+
+bool CoordFreeAndExists((int, int) coords, int[,] realm)
 {
-    {2, 4},
-    {3, 2}
-};
-
-int[,] matrix2 = new int [,]
-{
-    {3, 4},
-    {3, 3}
-};
-
-void MultiplyMatrix(int[,] matrix1, int[,] matrix2)
-{   
-    // int [,] resMatrix = new int[matrix1.GetLength(0),matrix2.GetLength(1)]
-    for (int i=0; i<matrix1.GetLength(0); i++)
-    {   
-        int fu = 0;
-        for (int j=0; j<matrix2.GetLength(1); j++)
-        {
-            fu += matrix1[i, j] * matrix1[j, i];
-        }
-        System.Console.WriteLine(fu);
+    try
+    { 
+        if (realm[coords.Item1, coords.Item2] == 0) return true;
+        return false;
+    }
+    catch
+    {
+        return false;
     }
 }
 
-MultiplyMatrix(matrix1, matrix2);
+
+int[,] realm = new int[4, 4];
+
+MovingObject walker = new MovingObject((0,0), "right");
+
+int i = 0;
+while (true)
+{
+    i++;
+    realm[walker.currentCoords.Item1, walker.currentCoords.Item2] = i;
+    if (CoordFreeAndExists(walker.GetNextCoord(), realm)) walker.MakeStep();
+    else
+    {
+        walker.ChangeDirection();
+        if (!CoordFreeAndExists(walker.GetNextCoord(), realm)) break;
+        walker.MakeStep();
+    }
+
+}
+
+Print2dArray(realm);
+
+
+
+class MovingObject
+{
+    public (int,int) currentCoords;
+    public string direction;
+
+    public MovingObject((int,int) currentCoords, string direction)
+    {
+        this.currentCoords = currentCoords;
+        this.direction = direction;
+    }
+
+    public void ChangeDirection()
+
+    {
+        if (this.direction == "right") this.direction = "down";
+        else if (this.direction == "down") this.direction = "left";
+        else if (this.direction == "left") this.direction = "up";
+        else this.direction = "right";
+    }
+
+    public (int, int) GetNextCoord()
+    {
+        if (this.direction=="right") return (currentCoords.Item1, currentCoords.Item2 + 1);
+        if (this.direction=="down") return (currentCoords.Item1+1, currentCoords.Item2);
+        if (this.direction=="left") return (currentCoords.Item1, currentCoords.Item2 - 1);
+        return (currentCoords.Item1-1, currentCoords.Item2);
+    }
+
+    public void MakeStep()
+    {   
+        this.currentCoords = this.GetNextCoord();
+    }
+}
+
+
